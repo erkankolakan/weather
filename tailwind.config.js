@@ -10,8 +10,13 @@ module.exports = {
       
       extend: {
         colors:{
-          "white":"#DB4221",
           "black":"#000000",
+          "whitee":"#FFFFFF",
+          "blueText" :"#8AACED",
+          "bgBlack" : "#13131A",
+          "cardBg" : "#1A1A28",
+          "searchBg" : "#3B3B54",
+          // #16161F
         },
       },
 

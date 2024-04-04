@@ -4,7 +4,7 @@ import Svg, { Path} from "react-native-svg";
 const iWeatherLogo = () => {
   return (
     <Svg
-      width="150"
+      width="200"
       height="50"
       viewBox="0 0 186 32"
       fill="none"
