@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
-import { Box, Input } from "native-base";
+import { Box, Input, Spinner,Heading } from "native-base";
 
 const SearchBar = () => {
   const [text, onChangeText] = React.useState("Useless Text");
@@ -19,11 +19,14 @@ const SearchBar = () => {
       <Box alignItems="center" className="-mb-2">
         <Input
           placeholder="Search Location"
-          className="bg-cardBg text-white text-sm font-nunitoSemiBold h-14"
+          className="bg-cardBg text-white relative text-sm font-nunitoSemiBold h-14"
           variant="unstyled"
           w="70%"
           // value={text}
           onChangeText={onChangeText}
+        />
+        <Spinner accessibilityLabel="Loading posts"
+          className="absolute right-4 h-full" size="sm" color="blue.500"
         />
       </Box>
       <View className=" w-[70%] rounded-md overflow-hidden">
