@@ -1,7 +1,9 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
-import { FontAwesome5 } from "@expo/vector-icons";
+
+// componenetler
 import HomeEntry from "../components/HomeEntry";
+import HomeWeatherDetails from "../components/HomeWeatherDetails";
 
 const Home = () => {
   return (
@@ -12,7 +14,9 @@ const Home = () => {
           {/* hava durumuna göre arkapa plan resmi */}
           <HomeEntry />
         </View>
-        <View className="flex-[2] w-full bg-gray-900 rounded-md overflow-hidden my-2"></View>
+        <View className=" w-full bg-gray-900 rounded-md overflow-hidden my-2">
+          <HomeWeatherDetails/>
+        </View>
         <View className="flex-[1] w-full bg-orange-500 my-2">
           <Text>asd</Text>
         </View>
