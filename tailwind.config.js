@@ -14,8 +14,10 @@ module.exports = {
           "whitee":"#FFFFFF",
           "blueText" :"#8AACED",
           "bgBlack" : "#13131A",
-          "cardBg" : "#1A1A28",
+          "fontColor" : "#1D1D32",
+          "cardBg" : "#1A1A28", 
           "searchBg" : "#3B3B54",
+
           // #16161F
         },
       },

@@ -4,6 +4,7 @@ import React from "react";
 // componenetler
 import HomeEntry from "../components/HomeEntry";
 import HomeWeatherDetails from "../components/HomeWeatherDetails";
+import DailyForecast from "../components/DailyForecast";
 
 const Home = () => {
   return (
@@ -15,10 +16,10 @@ const Home = () => {
           <HomeEntry />
         </View>
         <View className=" w-full bg-gray-900 rounded-md overflow-hidden my-2">
-          <HomeWeatherDetails/>
+          <HomeWeatherDetails />
         </View>
-        <View className="flex-[1] w-full bg-orange-500 my-2">
-          <Text>asd</Text>
+        <View className="flex-[1] w-full my-2 bg-gray-900">
+          <DailyForecast />
         </View>
       </View>
     </View>

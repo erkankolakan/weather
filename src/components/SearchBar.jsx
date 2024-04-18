@@ -1,10 +1,13 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { Box, Input, Spinner,Heading } from "native-base";
+import { useNavigation } from '@react-navigation/native';
+
 
 const SearchBar = () => {
   const [text, onChangeText] = React.useState("Useless Text");
   const [number, onChangeNumber] = React.useState("");
+  const navigation = useNavigation();
   return (
     <View className="h-screen absolute w-full gap-y-4  justify-center items-center ">
       <View>
@@ -31,10 +34,11 @@ const SearchBar = () => {
       </Box>
       <View className=" w-[70%] rounded-md overflow-hidden">
         <TouchableOpacity
+          onPress={() => navigation.navigate('Home')}
           className="bg-searchBg h-14  justify-center pl-2 border-black border-b-[1px] "
           activeOpacity={0.8}
         >
-          <Text className="text-white font-nunitoSemiBold ">Istanbul</Text>
+          <Text className="text-white font-nunitoSemiBold ">Istanbuls</Text>
         </TouchableOpacity>
         <TouchableOpacity
           className="bg-searchBg h-14  justify-center pl-2 border-black border-b-[1px] "
