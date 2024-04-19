@@ -35,8 +35,6 @@ const SearchBar = () => {
         const response = await axios.get(API_URL);
         const { lat, lon } = response.data[0];
         const weatherData = await getWeatherData(lat, lon);
-        console.log('City:', city);
-        console.log('Weather Data:', weatherData);
         navigation.navigate("Home",
           {
             city: city,
