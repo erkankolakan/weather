@@ -12,3 +12,6 @@ Bu yapmış olduğum tasarımda diğer hava durumu uygulamalarına nazaran sizin
 https://github.com/erkankolakan/weather/assets/126770706/d87e3964-03b0-4dc5-ba93-ee51e0a0f5e2
 
 Bu projede Zafer hocamın vermiş olduğu UI yı koda döktüm. Önüme konulan her UI frontEnde dökebilirim, bağlama konusunda eksiklerim var ama kendimi hergün geliştirmekteyim, projelerimin çoğu gizli olduğundan dolayı profilimde gözükmüyor ama bir yılda 35 den fazla proje 2 tane yarışmada 1. lik ve 2. lik kazandık. Aynı zamanda www.flabex.com olarak kendi markamızı oluşturarak freelancher olarak iş almaktayız.
+
+
+
