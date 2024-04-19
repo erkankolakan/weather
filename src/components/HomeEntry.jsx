@@ -7,14 +7,12 @@ const HomeEntry = ({ city, weatherData }) => {
   const weatherCode = weatherData.current.weather[0].icon;
   const [max, setMax] = useState();
   const [min, setMin] = useState();
-  // İlgili ikon ve arka plan URL'lerini alın
   const iconUrl = iconUrls[weatherCode];
   const bgUrl = bgUrls[weatherCode];
 
   const kelvinToCelsius = (kelvin) => {
     return kelvin - 273.15;
   };
-
 
   // günün en yüksek ve en düşük sıcaklıklarını alımak için fonksiyon forEach ile tüm saatlerin içini gezdik
   const getMinMax = () => {
@@ -30,7 +28,6 @@ const HomeEntry = ({ city, weatherData }) => {
         minTemp = temp;
       }
     });
-
     setMax(Math.round(kelvinToCelsius(maxTemp)));
     setMin(Math.round(kelvinToCelsius(minTemp)));
   };
