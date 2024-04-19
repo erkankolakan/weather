@@ -34,14 +34,6 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-# image
-*.png
-*.jpg
-*.svg
-*.jpeg
-*.gif
-*.ico
-*.webp
-*.zip
+
 
 
