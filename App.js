@@ -5,13 +5,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { useFonts } from "expo-font";
 
 // screens
-import { Home,Search } from "./src/screens/index";
-
+import { Home, Search } from "./src/screens/index";
 
 export default function App() {
   const Stack = createStackNavigator();
-  
-  
+
   const [fontsLoaded, fontError] = useFonts({
     nunito: require("./assets/fonts/Nunito-Regular.ttf"),
     nunitoExtraBold: require("./assets/fonts/Nunito-ExtraBold.ttf"),
@@ -19,8 +17,7 @@ export default function App() {
     nunitoBlack: require("./assets/fonts/Nunito-Black.ttf"),
     nunitoSemiBold: require("./assets/fonts/Nunito-SemiBold.ttf"),
   });
-  
-  
+
   return (
     <NativeBaseProvider>
       <NavigationContainer>
@@ -36,7 +33,6 @@ export default function App() {
           }}
         >
           <Stack.Screen name="Search" component={Search} />
-          
           <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>

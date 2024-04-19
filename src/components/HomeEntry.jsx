@@ -1,20 +1,58 @@
 import { View, Text, Image } from "react-native";
-import React from "react";
+import React,{useState,useEffect} from "react";
+import { iconUrls } from "../utils/constants";
+import { bgUrls } from "../utils/constants";
 
-const HomeEntry = () => {
+const HomeEntry = ({ city, weatherData }) => {
+  const weatherCode = weatherData.current.weather[0].icon;
+  const [max, setMax] = useState();
+  const [min, setMin] = useState();
+  // İlgili ikon ve arka plan URL'lerini alın
+  const iconUrl = iconUrls[weatherCode];
+  const bgUrl = bgUrls[weatherCode];
+
+  const kelvinToCelsius = (kelvin) => {
+    return kelvin - 273.15;
+  };
+
+
+  // günün en yüksek ve en düşük sıcaklıklarını alımak için fonksiyon forEach ile tüm saatlerin içini gezdik
+  const getMinMax = () => {
+    let maxTemp = -Infinity;
+    let minTemp = Infinity;
+
+    weatherData.hourly.forEach((hour) => {
+      const temp = hour.temp;
+      if (temp > maxTemp) {
+        maxTemp = temp;
+      }
+      if (temp < minTemp) {
+        minTemp = temp;
+      }
+    });
+
+    setMax(Math.round(kelvinToCelsius(maxTemp)));
+    setMin(Math.round(kelvinToCelsius(minTemp)));
+  };
+
+  useEffect(() => {
+    getMinMax();
+  }, []);
+
+
   return (
     <>
       <Image
-        source={require("../../assets/bg-images/Few-Clouds_Night.jpg")}
+        source={bgUrl}
         className="w-full h-full object-cover absolute inset-0 "
       />
       {/* Girilen yere göre konum ve tarih */}
       <View className="h-24 w-full pl-4 justify-center">
         <Text className="text-2xl font-nunitoSemiBold text-white">
-          Istanbul, TR
+          {city.cityName}, {city.country}
         </Text>
         <Text className="text-base font-nunito text-white">
-          Monday, May 15, 2023
+          {new Date().toDateString()}
         </Text>
       </View>
       {/* konumun derecesi ve hava durumunu belli eden resim */}
@@ -22,21 +60,23 @@ const HomeEntry = () => {
         <View className="justify-around items-center flex-row">
           <View>
             <Text className="text-4xl font-nunitoExtraBold text-white">
-              28<Text>°c</Text>
+              {Math.round(kelvinToCelsius(weatherData.current.temp))}
+              <Text>°c</Text>
             </Text>
             <Text className="text-xl font-nunitoExtraBold text-white">
-              28<Text>°c</Text> /{" "}
+              {/* min temp */}
+              {min}
+              <Text>°c</Text> /{" "}
               <Text className="text-xl font-nunitoExtraBold text-white">
-                32<Text>°c</Text>
+                {/* max temp */}
+                {max}
+                <Text>°c</Text>
               </Text>
             </Text>
             <Text className="text-base font-nunito text-white">Few clouds</Text>
           </View>
           <View>
-            <Image
-              source={require("../../assets/weather-icons/Few-Clouds_Night.png")}
-              className="w-44 h-44 object-cover"
-            />
+            <Image source={iconUrl} className="w-44 h-44 object-cover" />
           </View>
         </View>
       </View>

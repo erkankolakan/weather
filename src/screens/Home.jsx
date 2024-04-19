@@ -6,20 +6,28 @@ import HomeEntry from "../components/HomeEntry";
 import HomeWeatherDetails from "../components/HomeWeatherDetails";
 import DailyForecast from "../components/DailyForecast";
 
-const Home = () => {
+const Home = ({route: {params: { weatherData, city }}}) => {
+
   return (
     <View className="bg-bgBlack flex-1">
       <View className="flex-1  mx-2 justify-center items-center my-2">
         {/* HomeEntry comp */}
         <View className="flex-[2] w-full bg-orange-300 justify-between relative rounded-lg overflow-hidden my-2">
           {/* hava durumuna göre arkapa plan resmi */}
-          <HomeEntry />
+          <HomeEntry 
+            weatherData={weatherData}
+            city={city}
+          />
         </View>
         <View className=" w-full bg-gray-900 rounded-md overflow-hidden my-2">
-          <HomeWeatherDetails />
+          <HomeWeatherDetails  
+            weatherData={weatherData}
+          />
         </View>
         <View className="flex-[1] w-full my-2 bg-gray-900">
-          <DailyForecast />
+          <DailyForecast 
+            weatherData={weatherData}
+          />
         </View>
       </View>
     </View>
