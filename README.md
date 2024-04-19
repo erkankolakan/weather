@@ -3,7 +3,10 @@ Ben Erkan KOLAKAN 1 yıldır yazılım ile uğraşıyorum ve günden güne kendi
 
 
 ##Pingu
-[https://github.com/erkankolakan/weather/assets/126770706/5105614a-e216-4564-a1ef-957ae620dff5](https://streamable.com/894fqn)
+
+
+
+![Video bağlantısı](https://streamable.com/894fqn)
 Bu yapmış olduğum tasarımda diğer hava durumu uygulamalarına nazaran sizin arkdaşınız olan, size tavsiyelerde bulunan bir uygulama yapmak istedim. Ana karakterimizin ismi pingu, hava durumuna göre size tavsiyelerde bulunur.
 
 
