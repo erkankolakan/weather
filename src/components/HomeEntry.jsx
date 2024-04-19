@@ -1,5 +1,5 @@
 import { View, Text, Image } from "react-native";
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { iconUrls } from "../utils/constants";
 import { bgUrls } from "../utils/constants";
 
@@ -36,7 +36,6 @@ const HomeEntry = ({ city, weatherData }) => {
     getMinMax();
   }, []);
 
-
   return (
     <>
       <Image
@@ -44,7 +43,7 @@ const HomeEntry = ({ city, weatherData }) => {
         className="w-full h-full object-cover absolute inset-0 "
       />
       {/* Girilen yere göre konum ve tarih */}
-      <View className="h-24 w-full pl-4 justify-center">
+      <View className="h-20 w-full pl-4 justify-center">
         <Text className="text-2xl font-nunitoSemiBold text-white">
           {city.cityName}, {city.country}
         </Text>
@@ -53,7 +52,7 @@ const HomeEntry = ({ city, weatherData }) => {
         </Text>
       </View>
       {/* konumun derecesi ve hava durumunu belli eden resim */}
-      <View className="w-full  flex-1 justify-end">
+      <View className="w-full  flex-1 justify-center ">
         <View className="justify-around items-center flex-row">
           <View>
             <Text className="text-4xl font-nunitoExtraBold text-white">

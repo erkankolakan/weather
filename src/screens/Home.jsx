@@ -24,7 +24,7 @@ const Home = ({route: {params: { weatherData, city }}}) => {
             weatherData={weatherData}
           />
         </View>
-        <View className="flex-[1] w-full my-2 bg-gray-900">
+        <View className="h-40 w-full my-2 bg-gray-900">
           <DailyForecast 
             weatherData={weatherData}
           />

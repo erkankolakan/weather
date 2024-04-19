@@ -8,11 +8,6 @@ const Header = () => {
   return (
     <View className="bg-black h-14 w-full flex-row justify-between items-center px-2 ">
       <View className="">
-        {/* <Image
-          className="w-28 h-9 "
-          source={require("../../assets/iWeatherLogo.jsx")}
-          resizeMode="contain"
-        /> */}
         <IWeatherLogo className="w-12 bg-red-500" />
       </View>
       {/* ortaya ve sona bir değer eklemek için bu kısımlarda respon olarak eklendi */}

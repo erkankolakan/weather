@@ -11,31 +11,31 @@ const HomeWeatherDetails = ({ weatherData }) => {
     {
       id: "1",
       title: "Thermal sensation",
-      value: Math.round(kelvinToCelsius(weatherData.current.feels_like)) + "°c", // Örnek: "25°c"
+      value: Math.round(kelvinToCelsius(weatherData.current.feels_like)) + "°c",
       icon: "thermometer-outline",
     },
     {
       id: "2",
       title: "Probability of rain",
-      value: weatherData.daily[2].rain + "%", // Örnek: "0%"
+      value: weatherData.daily[2].rain + "%",
       icon: "rainy-outline",
     },
     {
       id: "3",
       title: "Wind speed",
-      value: weatherData.current.wind_speed + " km/h", // Örnek: "8 km/h"
+      value: weatherData.current.wind_speed + " km/h", 
       icon: "wind",
     },
     {
       id: "4",
       title: "Air humidity",
-      value: weatherData.current.humidity + "%", // Örnek: "40%"
+      value: weatherData.current.humidity + "%",
       icon: "tachometer-alt",
     },
     {
       id: "5",
       title: "UV Index",
-      value: weatherData.current.uvi, // Örnek: "5"
+      value: weatherData.current.uvi, 
       icon: "sunny-outline",
     },
   ];

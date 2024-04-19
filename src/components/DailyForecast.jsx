@@ -4,14 +4,14 @@ import { iconUrls } from "../utils/constants";
 
 const DailyForecast = ({ weatherData }) => {
   const generateForecastData = () => {
-    const dailyData = weatherData.daily.slice(0, 5); // Assuming you want the forecast for the next 5 days
+    const dailyData = weatherData.daily.slice(0, 5); 
     return dailyData.map((dayData, index) => {
-      const date = new Date(dayData.dt * 1000); // Convert Unix timestamp to milliseconds
-      const day = date.toLocaleDateString("en-US", { weekday: "short" }); // Get the short day name
-      const maxTemp = Math.round(dayData.temp.max - 273.15); // Convert max temperature from Kelvin to Celsius
-      const minTemp = Math.round(dayData.temp.min - 273.15); // Convert min temperature from Kelvin to Celsius
+      const date = new Date(dayData.dt * 1000); 
+      const day = date.toLocaleDateString("en-US", { weekday: "short" }); 
+      const maxTemp = Math.round(dayData.temp.max - 273.15); 
+      const minTemp = Math.round(dayData.temp.min - 273.15);
       const weatherIcon = dayData.weather[0].icon;
-      const img = iconUrls[weatherIcon]; // Assuming you have an iconUrls object similar to the one used in HomeEntry component
+      const img = iconUrls[weatherIcon]; 
       return {
         id: index.toString(),
         day: day,
